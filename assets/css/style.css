@@ -1,0 +1,138 @@
+body{
+font-family: 'Amatic SC', cursive;
+background-image: url("/assets/img/bg-barley.jpg");
+background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-position-x: 50%;
+  background-position-y: 50%;
+   background-size: cover;
+}
+.container{
+font-family: 'Amatic SC', cursive;
+}
+.light{
+ color: rgb(120 120 120);
+ font-size: 15px;
+}
+.head{
+background-color: white;
+padding: 2% 2%;
+}
+/* main */
+.carousel-item a:hover{
+background-color: rgb(174, 209, 46);
+}
+.welcome{
+  background-color: white;
+  padding: 1%;
+}
+.main-content{
+margin: 2%;
+}
+.main-content .material-icons{
+margin-top: 5%;
+font-size: 50px;
+color: rgb(174, 209, 46);
+}
+.main-content i:hover{
+margin: -5px 0 12px 0;
+color: rgb(20, 20, 20);
+}
+.main-content a:hover{
+    background-color: rgb(174, 209, 46);
+}
+.main-content .highlight{
+color: rgb(174, 209, 46);
+font-size: 20px;
+font-weight: bold;
+}
+.main-content h2{
+font-weight: bold;
+}
+/*products*/
+.box{
+  padding: 1%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+}
+.products{
+  margin: 20px 0px 50px 0px;
+  background-color: rgba(220, 220, 220, 0.7);
+  padding-bottom: 70px;
+  padding-top: 50px;
+  }
+.products h1{
+text-align: center;
+  }
+.new{
+ color: rgb(250 0 0);
+ font-weight: normal;
+ font-size: 11px;
+}
+.accordion button{
+ color: rgb(174, 209, 46);
+ font-weight: bold;
+ font-size: 26px;
+}
+.boxcontent{
+  margin: 0px 0px 5% 0px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-top: solid white 0.5px;
+  border-bottom: solid white 0.5px;
+  padding: 30px 0px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+}
+/*contact*/
+.boxcontent h3 a{
+  color: black;
+}
+.boxcontent h3 a:hover{
+  color: rgb(174, 209, 46);
+}
+#send-but{
+color: rgb(174, 209, 46);
+font-size: bold;
+}
+#send-but:hover{
+color: rgb(60, 60, 60);
+ background-color: rgb(174, 209, 46);
+ border: white;
+}
+/*about*/
+.highlight{
+color: rgb(174, 209, 46);
+font-size: 20px;
+font-weight: bold;
+
+}
+/*footer*/
+#footer{
+  border-top: rgb(174, 209, 46) solid 5px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 16px;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  margin: 0 0%;
+  padding: 0.5%;
+}
+#copy-footer .material-icons{
+  font-size: 14px;
+}
+#footer a{
+text-decoration: none;
+color: white;
+}
+#footer a:hover{
+color: rgb(174, 209, 46);
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Post |www.bio-schramm.at{% endblock title %}
+{% block content %}
+<div id="top" class="welcome" style="font-family: san-serif;">
+    <div class="boxcontent">
+        <form method="post">
+            <h3><i class="material-icons">create</i> Neuen Post <i class="material-icons">create</i></h3><br>
+            <div class="new">
+                <h6><input class="form-control" type="text" name="sent" required></h6>
+                <h6><input class="form-control" type="text" name="title" placeholder="Titel" required></h6>
+                <h6><input class="form-control" type="text" name="title2" placeholder="Untertitel"></h6>
+            </div>
+            <div>
+                <h6><strong><input class="form-control" type="text" name="pic"
+                                   placeholder="zb ... /assets/img/shapeimage_2.png"></strong></h6>
+                <h6><strong><input class="form-control" type="text" name="pic2"
+                                   placeholder="zb ... /assets/img/shapeimage_2.jpg"></strong></h6>
+                 <h6><strong><input class="form-control" type="text" name="pic3"
+                                   placeholder="zb ... /assets/img/shapeimage_2.jpeg"></strong></h6>
+            </div>
+             <div>
+                   <h6><strong><input class="form-control" type="text" name="description1" placeholder="Beschreibung 1" required></strong></h6>
+                   <h6><strong><input class="form-control" type="text" name="description2" placeholder="Beschreibung 2"></strong></h6>
+                   <h6><strong><input class="form-control" type="text" name="description3" placeholder="Beschreibung 3"></strong></h6>
+                </div>
+            <div>
+                <h6><textarea class="form-control" name="message" rows="10" cols="80" placeholder="Text"
+                              required></textarea></h6>
+            </div>
+            <button class="btn btn-outline-dark" type="submit"><i class="material-icons">send</i>Posten</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Produkte |www.bio-schramm.at{% endblock title %}
+{% block content %}
+<div class="welcome">
+    <div class="products" id="products-text">
+
+        <h2 style="background-color: rgba(50, 50, 50, 0.8); color: rgb(174, 209, 46); text-align: center;">Unser Hofladen ist für Sie von <i style="font-weight: bold;">Montag bis Sonntag 08:00-20:00 Uhr</i> geöffnet. Selbstbedienung!</h2>
+        <h1>Unsere Produkte</h1>
+        <br>
+        <div class="accordion" id="accordionExample" style="margin-left:10%;margin-right:10%;">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="false" aria-controls="collapseOne">
+                            GEMÜSE >>
+                        </button>
+                        <img src="/assets/img/schramm_03.jpg" style="height: 54px;">
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                     data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h3>GEMÜSE</h3>
+                        <ul>
+                            <li>Kartoffeln: festkochend & halbfestkochend</li>
+                            <li>Kartoffeln rote & blaue <span class="new">NEU</span></li>
+                            <li>Zwiebeln: Gelb & Rot</li>
+                            <li>Karotten: Rote, Gelbe & Blaue</li>
+                            <li>Tomaten: Rot & Gelb, Cocktailtomaten, Raritäten</li>
+                            <li>Salate: verschiedene Sorten</li>
+                            <li>Fisolen: Gelb & Grün</li>
+                            <li>Rote Rüben</li>
+                            <li>Gurken</li>
+                            <br>
+
+                            <h5>Weiters versch. Sorten von</h5>
+
+                            <li>Pfefferoni</li>
+                            <li>Kräuter</li>
+                            <li>Kürbis</li>
+                            <li>Paprika</li>
+                        </ul>
+                        <br>
+
+                        <h3>Außerdem</h3>
+                        <p>Chinakohl, Pastinak, Fenchel, Wassermelonen,
+                            Zucchini, Radieschen, Gurken, Borretsch, Dille, Kresse & vieles mehr !</p>
+                        <button type="button" class="btn btn-outline-dark" onclick="printFunction()">drucken</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            GETREIDE >>
+                        </button>
+                        <img src="/assets/img/schramm_getreide.jpg" style="height: 60px;">
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h3>GETREIDE (als Korn, Vollkornmehl, Mehl-extrafein, Grieß & Kleie)</h3>
+                        <ul>
+                            <li>Dinkel</li>
+                            <li>Weizen</li>
+                            <li>Einkorn</li>
+                            <li>Roggen</li>
+                            <li>Urkorn (Pharaonenkorn)</li>
+                            <li>TEFF-MEHL <span class="new">NEU</span></li>
+                            <li>Hirse*</li>
+                            <li>Amaranth*</li>
+                            <li>Buchweizen*</li>
+                        </ul>
+                        <p>*) gekennzeichnete Mehle werden in einer eigenen Mühle gemahlen und sind daher glutenfrei!!!</p>
+                        <br>
+                        <p>Wir bieten sämtliche Getreidearten als Grieß, Flocken, Reis, ganze Körner,
+                            gemahlen und als extrafein gemahlen an.</p>
+                        <button type="button" class="btn btn-outline-dark" onclick="printFunction()">drucken</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ÖLE >>
+                        </button>
+                        <img src="/assets/img/schramm_oele.jpg" style="height: 60px;">
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h3>ÖLE</h3>
+                        <ul>
+                            <li>Sonnenblumenöl kaltgepresst</li>
+                            <li>Kürbiskernöl</li>
+                        </ul>
+                        <br>
+                        <h3></h3>
+                        <button type="button" class="btn btn-outline-dark" onclick="printFunction()">drucken</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+function printFunction() {
+    window.print();
+}
+
+</script>
+{% endblock content %}
