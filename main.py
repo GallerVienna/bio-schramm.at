@@ -52,7 +52,7 @@ class Admin(BaseHandler):
         return self.render_template("admin.html", params=params)
 
     def post(self):
-        passwort = self.request.get("sent")
+        password = self.request.get("sent")
         title = self.request.get("title")
         title2 = self.request.get("title2")
         pic = self.request.get("pic")
@@ -63,7 +63,7 @@ class Admin(BaseHandler):
         description3 = self.request.get("description3")
         message = self.request.get("message")
 
-        if passwort != "PASSWORT": #That not anyone can post articles
+        if password != "PASSWORD": #That not anyone can post articles
             return self.write("Your are not authorised to post!")
         if "<script>" in message: #A little hacker protection
             return self.write("Can't hack me!")
