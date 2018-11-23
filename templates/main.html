@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Biohof Schramm |www.bio-schramm.at% endblock title %}
+{% block title %}Biohof Schramm |www.bio-schramm.at{% endblock title %}
 {% block content %}
 <div class="welcome">
     <div class="main-slide-show">
@@ -107,7 +107,9 @@
                                 <a class="btn btn-dark" href="/feed">mehr erfahren</a>
                             </div>
                         </div>
-                        {% endfor %}
+                        {% else %}
+                        <h1>Artikel folgen ... </h1>
+                       {% endfor %}
                     </div>
                 </div>
             </div>
