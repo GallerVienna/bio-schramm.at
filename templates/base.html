@@ -31,15 +31,36 @@
     <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?u8vidh">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Quicksand" rel="stylesheet">
 </head>
 
-<body>
-<div class="container">
+<body onload="myFunction()">
+<div id="loader"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+function myFunction() {
+    myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+<div class="container" style="display:none;" id="myDiv">
     <div class="head">
         <div class="row">
             <div class="col-8" id="first">
-                <a href="/" style="text-decoration: none; color: black;"><h1 style="margin: 0 0 -0.5% 0;">BIO HOF SCHRAMM</h1></a>
-                <h5 style="color: rgb(174, 209, 46);">seit 10 Jahren BIO</h5>
+                <a href="/" style="text-decoration: none; color: black;"><h1 style="margin: 0 0 -0.5% 0; text-shadow: 0px 5px 5px grey;">BIO HOF SCHRAMM</h1></a>
+                <h5 style="color: rgb(174, 209, 46); font-weight: bold;">seit 10 Jahren BIO</h5>
             </div>
             <div class="col-4">
             <img src="/assets/img/logo_schramm_web.png" width="78" height="78" alt="Bio Hof Schramm" style="float: right; ">
@@ -65,10 +86,10 @@
                     <a class="nav-link" href="/products">unsere Produkte</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Fotos</a>
+                    <a class="nav-link" href="/gallery">Fotos</a>
                 </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/feed">Aktuelles</a>
+                    <a class="nav-link" href="/articles">Aktuelles</a>
                 </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/contact">Kontakt</a>
@@ -87,7 +108,8 @@
                 <h6><i class="material-icons">place</i> Hauptstraße 139, 2212 Großengersdorf</h6>
 
                 <h6><i class="material-icons">phone</i>
-                    +43 (0)2245 88478 <i class="material-icons">phone_iphone</i>
+                    +43 (0)2245 88478 </h6>
+               <h6><i class="material-icons">phone_iphone</i>
                     +43 (0)676 3604947</h6>
                 <h6></h6>
 
@@ -97,11 +119,11 @@
                 <h6><i class="material-icons">laptop</i>
                     <a  href="www.bio-schramm.at" target="_blank">www.bio-schramm.at</a></h6>
            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="open-footer">
-                <h5 style="border-bottom: white solid 0.5px; float: left; margin-right: 5%;">Bio Hofladen</h5>
-                <h5>Öffnungszeiten: Mo - So: 8.00 - 20.00 Uhr   Selbstbedienung!</h5>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="open-footer" style="text-align: center;">
+                <h5 style="margin: 0.5% 0; text-decoration: underline;">Öffnungszeiten:</h5>
+                <h5> Mo - So: 8.00 - 20.00 Uhr   Selbstbedienung!</h5>
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1325.5738642692745!2d16.57293629643634!3d48.357684919433574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d1cfb99fc7d99%3A0x7ebc2b0bbbd62d30!2sHauptstra%C3%9Fe+139%2C+2212+Gro%C3%9Fengersdorf!5e0!3m2!1sde!2sat!4v1542433545099"
-                       width="280" height="120" frameborder="0" style="border: solid white 1px" allowfullscreen></iframe>
+                       width="280" height="120" frameborder="0" allowfullscreen style="box-shadow: 0px 3px 3px grey;"></iframe>
 
             </div>
              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="link-footer">
@@ -112,24 +134,28 @@
                 <h6>| Kontakt</h6>
             </a>
                  <h6 style="float:left; margin-top: -0.5%;">|</h6>
-                <a href="https://www.facebook.com/Bio-Hof-Schramm-674455285943253/" style="float: left; margin-left: 1%;">
+                <a href="https://www.facebook.com/Bio-Hof-Schramm-674455285943253/" target="_blank" style="float: left; margin-left: 1%;">
                <div class="socicon-facebook"></div>
             </a>
-            <a href="https://www.twitter.com" style="float: left;">
+            <a href="https://www.twitter.com" target="_blank" style="float: left;">
                 <div class="socicon-twitter"></div>
             </a>
-            <a href="https://www.youtube.com" style="float: left; margin-left: 1%;">
+            <a href="https://www.youtube.com" target="_blank" style="float: left; margin-left: 1%;">
                 <div class="socicon-youtube"></div>
             </a>
+                  <br>
+                     <div class="fb-like" data-href="https://www.facebook.com/Bio-Hof-Schramm-674455285943253/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+                 <br>
                  <br>
                   <div>
                 <img src="/assets/img/bio_logo.jpg" width="48" height="32" alt="EuBioLogo">
                     </div>
+
+                 <br>
             </div>
 
        </div>
 
 </div>
-
 </body>
 </html>

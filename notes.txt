@@ -1,0 +1,10 @@
+
+at the end:
+
+G-mail Konto und
+Appengine einrichten auf "bio-schramm@gmail.com"
+
+Kennwort(emailadresse) für Post ändern.
+Kontaktformular main.py emailadresse ändern
+
+Hostzugang für Alias adresse "www.bio-schramm.at"

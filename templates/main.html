@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Biohof Schramm |www.bio-schramm.at{% endblock title %}
+{% block title %}Biohof Schramm | www.bio-schramm.at{% endblock title %}
 {% block content %}
 <div class="welcome">
     <div class="main-slide-show">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="assets/img/schramm_01.jpg" alt="First slide">
@@ -51,17 +50,25 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="main-content">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; margin: 5% 0 0 0;">
+    </div>
+        <div class="main-content" style="margin-bottom:25px;">
+            <div class="row" style="box-shadow: 0px 3px 3px grey;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id=presentation>
                     <h3>Unser Biobetrieb liegt am Rande des Marchfeldes - der sogenannten Kornkammer Österreichs.</h3>
                     <h3>Dennoch ist der Stephansdom – das Wahrzeichen Wiens – nur 22 km entfernt.</h3>
-                    <h2 style="color: rgb(174, 209, 46);">Herzlich Willkommen<br> am<br> BIO HOF SCHRAMM</h2>
+                    <h2 >Herzlich Willkommen<br> am<br> BIO HOF SCHRAMM</h2>
                     <br>
-                    <p style="border-bottom: 1.5px solid rgb(200 200 200); margin: 1% 0% 2% 0%;"></p>
                 </div>
             </div>
-            <div class="row">
+
+            <div class="over" style="position: relative; ">
+
+        <h2 style="background-color: rgba(150, 150, 150, 0.1); position: relative; padding: 21% 0;"> </h2>
+            </div>
+
+
+
+            <div class="row" id=second-row>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <i class="material-icons">face</i>
                     <h2>Über uns</h2>
@@ -72,8 +79,6 @@
                         Richtlinien und Kontrollen.</h5>
                     <h5> Der <i class="highlight">Ackerbau</i> ist die <i class="highlight">Haupteinnahmequelle</i>
                         unseres Betriebes.</h5>
-                    <br>
-
                     <a class="btn btn-dark" href="/about">mehr erfahren</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -85,35 +90,52 @@
                     <h5><i class="highlight">Alte Getreide- und Gemüsesorten</i> werden durch ihre hohe Widerstandskraft
                         gegenüber Krankheiten
                         und Schädlingen <i class="highlight">bevorzugt angebaut.</i></h5>
-                    <br>
                     <a class="btn btn-dark" href="/products">mehr erfahren</a>
                 </div>
             </div>
-            <div class="row" style="padding-top: 4%;">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p style="border-bottom: 1.5px solid rgb(200 200 200); margin: 5% 0% 2% 0%;"></p>
-                    <h2><i class="material-icons">speaker_notes</i>Aktuelles</h2>
-                    <div class="row" style="margin: 2.5%;"></div>
-                    <div class="row" style="margin: 2.5%;">
-                        {% for article in articles %}
-                        <div class="card" id="article-card">
-                            <div class="card-body">
-                                <i class="light">{{ article.created.strftime('%d %B %Y') }}</i>
-                                <h2 class="card-title" style="color: rgb(174, 209, 46);">{{ article.title }}</h2>
+            <div class=row style=" box-shadow: 0px 3px 3px grey; padding: 0 0 5% 0;">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="padding: 2% 0 5% 3%;">
+            <h2><i class="material-icons">speaker_notes</i>Aktuelles</h2>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="padding: 7% 0 5% 3%;">
+                    <h4>Hier sehen Sie aktuelle Neuigkeiten und mehr... </h4>
+                </div>
+                  <!-- Your like button code -->
 
-                                <h4 style="text-decoration: underline;">{{ article.title2 }}</h4>
-                                <h5>{{ article.message[0:175] }} ... </h5>
-                                <br>
-                                <a class="btn btn-dark" href="/feed">mehr erfahren</a>
-                            </div>
+
+
+                <div style="width: 90%; margin-left: 5%; text-align: center;">
+                 <div class="fb-page" data-href="https://www.facebook.com/Bio-Hof-Schramm-674455285943253" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                      data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Bio-Hof-Schramm-674455285943253" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Bio-Hof-Schramm-674455285943253">Bio Hof Schramm | Facebook</a></blockquote></div>
+                </div>
+
+                <!--
+             {% for article in articles[0:3] %}
+            <div class="row" style="margin: 0.5%;">
+                <div class="card" id="article-card-main" style="box-shadow: 0px 5px 5px grey;">
+                    <div class="card-body">
+                        <div class="row" style="margin: 0.5%;">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <i class="light">{{ article.created.strftime('%d %B %Y') }}</i>
+                            <h2 class="card-title" style="color: rgb(174, 209, 46);">{{ article.title }}</h2>
+                            <h4 style="text-decoration: underline;">{{ article.title2 }}</h4>
+                            <h5>{{ article.message[0:175] }} ... </h5>
+                            <br>
+                            <a class="btn btn-dark" href="/articles">mehr lesen >>></a>
                         </div>
-                        {% else %}
-                        <h1>Artikel folgen ... </h1>
-                       {% endfor %}
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="text-align: center;">
+                            <br>
+                              <a target="_blank" href="{{ article.pic }}">
+                            <img src="{{ article.pic }}" alt="article_img" width="160px" id="article-img-main">
+                              </a>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            {% endfor %} -->
+
+                </div>
     </div>
 </div>
 {% endblock content %}

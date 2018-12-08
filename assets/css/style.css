@@ -1,31 +1,46 @@
 body{
-font-family: 'Amatic SC', cursive;
-background-image: url("/assets/img/bg-barley.jpg");
-background-repeat: no-repeat;
+  /*font-family: 'Amatic SC', cursive;*/
+  background-image: url("/assets/img/bg-barley.jpg");
+  background-repeat: no-repeat;
   background-attachment: scroll;
   background-clip: border-box;
   background-position-x: 50%;
   background-position-y: 50%;
-   background-size: cover;
+  background-size: cover;
+  min-height: 580px;
 }
 .container{
-font-family: 'Amatic SC', cursive;
+ font-family: 'Quicksand', sans-serif;
 }
 .light{
  color: rgb(120 120 120);
  font-size: 15px;
 }
 .head{
-background-color: white;
-padding: 2% 2%;
+    background-color: white;
+    padding: 2% 2%;
 }
+h2{
+text-shadow: 0px 3px 3px grey;
+}
+h1{
+text-shadow: 0px 3px 3px grey;
+}
+
 /* main */
+.main-slide-show{
+box-shadow: 0px 5px 5px grey;
+}
+.carousel-item a{
+box-shadow: 0px 3px 3px grey;
+}
 .carousel-item a:hover{
 background-color: rgb(174, 209, 46);
+box-shadow: 0px 3px 3px grey;
 }
 .welcome{
   background-color: white;
-  padding: 1%;
+  padding: 2%;
 }
 .main-content{
 margin: 2%;
@@ -34,23 +49,63 @@ margin: 2%;
 margin-top: 5%;
 font-size: 50px;
 color: rgb(174, 209, 46);
+text-shadow: 0px 3px 3px grey;
 }
-.main-content i:hover{
-margin: -5px 0 12px 0;
+.main-content .material-icons:hover{
+margin: 2% 0 4% 0;
 color: rgb(20, 20, 20);
+font-size: 52px;
 }
 .main-content a:hover{
-    background-color: rgb(174, 209, 46);
+   background-color: rgb(174, 209, 46);
+   box-shadow: 0px 3px 3px grey;
 }
-.main-content .highlight{
+.main-content a{
+   box-shadow: 0px 3px 3px grey;
+}
+#presentation{
+text-align: center;
+margin: 5% 0 0 0;
+}
+#presentation h2{
+text-shadow: none;
+font-weight: bold;
 color: rgb(174, 209, 46);
-font-size: 20px;
-font-weight: bold;
 }
-.main-content h2{
-font-weight: bold;
+.over{
+  background-image: url("/assets/img/nature.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+
+}
+
+
+#second-row{
+box-shadow: 0px 3px 3px grey;
+}
+#second-row h2{
+padding: 0 0 1.5% 0;
+}
+#second-row a{
+margin: 5% 0 15% 0;
+box-shadow: 0px 3px 3px grey;
+}
+#article-img-main{
+box-shadow: 0px 3px 3px grey;
+margin: 2% 0 0 0;
 }
 /*products*/
+.products .card{
+margin: 1% 5%;
+box-shadow: 0px 3px 3px grey;
+}
+.products .modal-title{
+color: rgb(174, 209, 46);
+}
 .box{
   padding: 1%;
   background-repeat: no-repeat;
@@ -65,9 +120,6 @@ font-weight: bold;
   background-color: rgba(220, 220, 220, 0.7);
   padding-bottom: 70px;
   padding-top: 50px;
-  }
-.products h1{
-text-align: center;
   }
 .new{
  color: rgb(250 0 0);
@@ -93,9 +145,18 @@ text-align: center;
   background-position-y: 50%;
   background-size: cover;
 }
+.boxcontent h1{
+border-bottom: 1.5px solid rgb(200 200 200);
+margin: 0.5% 0 2% 0;
+padding: 0 0 2% 0;
+text-shadow: 0px 3px 3px grey;
+}
 /*contact*/
 .boxcontent h3 a{
   color: black;
+}
+.boxcontent h2{
+  text-shadow: none;
 }
 .boxcontent h3 a:hover{
   color: rgb(174, 209, 46);
@@ -103,6 +164,7 @@ text-align: center;
 #send-but{
 color: rgb(174, 209, 46);
 font-size: bold;
+box-shadow: 0px 3px 3px grey;
 }
 #send-but:hover{
 color: rgb(60, 60, 60);
@@ -114,12 +176,28 @@ color: rgb(60, 60, 60);
 color: rgb(174, 209, 46);
 font-size: 20px;
 font-weight: bold;
-
+}
+/*gallery*/
+#gallery{
+text-align: center;
+margin-right: 1.5%;
+}
+#gallery img{
+width:100%;
+box-shadow: 0px 5px 5px grey;
+margin: 1% 10% 2% 2%;
+}
+#gallery img:hover{
+width:105%;
+}
+#gallery h1{
+margin: 0 0 4% 0;
 }
 /*footer*/
 #footer{
   border-top: rgb(174, 209, 46) solid 5px;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Amatic SC', cursive;*/
   font-size: 16px;
   background-color: rgb(50, 50, 50);
   color: white;
@@ -135,4 +213,57 @@ color: white;
 }
 #footer a:hover{
 color: rgb(174, 209, 46);
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 180px;
+  height: 180px;
+  padding: 5%;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(50, 50, 50);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.container {
+  position: relative;
+  -webkit-animation-name: container;
+  -webkit-animation-duration: 1s;
+  animation-name: container;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes container {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes container {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
 }

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Aktuelles | www.bio-schramm.at{% endblock title %}
+{% block content %}
+<div class="welcome">
+    <div class="boxcontent">
+        <h1>Aktuelles</h1>
+        <div class="row" style="padding-top: 4%;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p style=""></p>
+                <div class="row" style="margin: 2.5%;">
+                    {% for article in articles %}
+                    <div class="card" id="article-card" style="box-shadow: 0px 3px 3px grey; margin: 0 0 1.5% 0;">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <i class="light">Veröffentlicht am:  {{ article.created.strftime('%d %B %Y') }}</i>
+                                  <br>
+                                <h1 class="card-title" style="color: rgb(174, 209, 46); border-bottom: none;">{{ article.title }}</h1>
+                                <h4 style="text-decoration: underline;">{{ article.title2 }}</h4>
+                                <h4>{{ article.message }}</h4>
+                                <br>
+                              </div>
+                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                 <a target="_blank" href="{{ article.pic }}">
+                                <img src="{{ article.pic }}" alt="a{{ article.title }}_img" width="100%" style="box-shadow: 0px 5px 5px grey;">
+                                 </a>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
